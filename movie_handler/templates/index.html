@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="main-title">Movies</div>
+    <table class="table box-style">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Release Year</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <a href="/movies/add/"> Add Item</a>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        {% for movie in movies %}
+            <tr>
+                <td>
+                    <a href="{% url "movie_detail" movie.title %}">
+                        {{ movie.title }}
+                    </a>
+                </td>
+                <td>{{ movie.genre }}</td>
+                <td>{{ movie.release_year }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+{% endblock %}

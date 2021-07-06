@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="main-title">Add Movie</div>
+
+ <form action="/movies/add/" enctype="multipart/form-data" method="POST" class="box-style">
+ {% csrf_token %}
+ {{ form }}
+ <input type="submit" value="Submit">
+ <div>
+    <a href="/">Cancel</a>
+    </div>
+ </form>
+
+{% endblock %}
