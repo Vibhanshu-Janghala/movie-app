@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings  # new
 from django.conf.urls.static import static  # new
+from . import views
 
 urlpatterns = [
+    path('', views.home),
     path('admin/', admin.site.urls),
     path("movies/", include("movie_handler.url"))
 ]
