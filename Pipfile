@@ -8,6 +8,7 @@ django = "*"
 gunicorn = "*"
 whitenoise = "*"
 django-heroku = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
